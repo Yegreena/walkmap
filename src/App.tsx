@@ -51,8 +51,9 @@ function App() {
         
         // 创建地图实例，设置为极简风格，禁用所有交互
         const map = new (window as any).AMap.Map(mapContainerRef.current, {
-          zoom: 16, // 固定缩放级别
+          zoom: 18, // 固定缩放级别
           center: [116.397428, 39.90923], // 北京天安门，后续会改为用户位置
+          features: ['bg', 'road', 'building'],
           pitch: 0,
           rotation: 0,
           // 禁用所有手势操作
@@ -72,7 +73,7 @@ function App() {
         map.on('complete', () => {
           
           // 设置单色背景样式（极简风格）
-          map.setMapStyle('amap://styles/light');
+          map.setMapStyle('amap://styles/whitesmoke');
           
           setTimeout(() => {
             // 地图初始化完成后开始定位
