@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-50: #eff6ff;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --emotion-joy: #f59e0b;
+  --emotion-surprise: #ef4444;
+  --emotion-confusion: #8b5cf6;
+  --emotion-calm: #10b981;
+  --emotion-neutral: #6b7280;
+  --map-background: #f5f5f5;
+  --map-road: #cccccc;
+  --map-route: #1890ff;
+  --map-user-location: #ff6b35;
+  --container-padding: 1rem;
+  --card-border-radius: 0.75rem;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.5rem;
+    --card-border-radius: 1rem;
+  }
+}
+
+body {
+  @apply font-sans antialiased bg-gray-50 text-gray-900 overflow-hidden;
+}
+* {
+  @apply box-border;
+} 
